@@ -74,8 +74,8 @@ Decider (the name is a work in progress), is a progressive web application (PWA)
 
 Decider aims to be able to have the same functionality for both anonymous and registered users, whereby you can either
 link a team, group, relationship, via a _shared_ user access code and password, or have registered members to a group.
-This application has been built using a Golang backend with a PostgreSQL database, a React TypeScript front-end with
-Ionic for mobile application development as hosted on Google Cloud Platform.
+This application has been built using a Golang backend with Firebase Hosting & Realtime Database alongside Google Cloud
+Platform, a React TypeScript front-end with Ionic for mobile application development.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

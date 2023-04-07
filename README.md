@@ -12,7 +12,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/jamestkelly/decider">
-    <img src="resources/img/golang_gopher_mage.jpg" alt="Logo" width="80" height="80">
+    <img src="resources/img/decider_logo_background.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Decider</h3>
@@ -74,8 +74,8 @@ Decider (the name is a work in progress), is a progressive web application (PWA)
 
 Decider aims to be able to have the same functionality for both anonymous and registered users, whereby you can either
 link a team, group, relationship, via a _shared_ user access code and password, or have registered members to a group.
-This application has been built using a Golang backend with a PostgreSQL database, a React TypeScript front-end with
-Ionic for mobile application development as hosted on Google Cloud Platform.
+This application has been built using a Golang backend with Firebase Hosting & Realtime Database alongside Google Cloud
+Platform, a React TypeScript front-end with Ionic for mobile application development.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -84,7 +84,7 @@ Ionic for mobile application development as hosted on Google Cloud Platform.
 * [![React][React.js]][React-url]
 * [![Ionic][Ionic.dev]][Ionic-url]
 * [![Go][Golang.go]][Go-url]
-* [![PostgreSQL][PostgreSQL.sql]][PostgreSQL-url]
+* [![Firebase][Firebase.dev]][Firebase-url]
 * [![Google Cloud Platform][gcp.dev]][gcp-url]
 * [![Docker][Docker.dev]][Docker-url]
 
@@ -178,6 +178,7 @@ Thank you to the following for their guides and articles on similar projects.
 
 * [Build A Go REST API, React.js & TypeScript Todo Application - TomDoesTech](https://www.youtube.com/watch?v=QevhhM_QfbM)
 * [A Golang + ReactJS Application - Madhan Ganesh](https://medium.com/@madhanganesh/golang-react-application-2aaf3bca92b1)
+* [Serve Dynamic Content and Host Microservices with Cloud Run](https://firebase.google.com/docs/hosting/cloud-run)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -200,8 +201,8 @@ Thank you to the following for their guides and articles on similar projects.
 [React-url]: https://reactjs.org/
 [Golang.go]: https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white
 [Go-url]: https://go.dev/
-[PostgreSQL.sql]: https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white
-[PostgreSQL-url]: https://www.postgresql.org/
+[Firebase.dev]: ![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white)
+[Firebase-url]: https://firebase.google.com
 [gcp.dev]: https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white
 [gcp-url]: https://cloud.google.com/
 [Ionic.dev]: https://img.shields.io/badge/Ionic-3880FF?style=for-the-badge&logo=ionic&logoColor=white

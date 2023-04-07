@@ -201,7 +201,7 @@ Thank you to the following for their guides and articles on similar projects.
 [React-url]: https://reactjs.org/
 [Golang.go]: https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white
 [Go-url]: https://go.dev/
-[Firebase.dev]: ![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white)
+[Firebase.dev]: https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white
 [Firebase-url]: https://firebase.google.com
 [gcp.dev]: https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white
 [gcp-url]: https://cloud.google.com/

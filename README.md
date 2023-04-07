@@ -12,7 +12,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/jamestkelly/decider">
-    <img src="resources/img/golang_gopher_mage.jpg" alt="Logo" width="80" height="80">
+    <img src="resources/img/decider_logo_background.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Decider</h3>

@@ -60,7 +60,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](https://decider.web.app)
 
 Decider (the name is a work in progress), is a progressive web application (PWA) intended for the following purposes:
 
@@ -76,6 +76,8 @@ Decider aims to be able to have the same functionality for both anonymous and re
 link a team, group, relationship, via a _shared_ user access code and password, or have registered members to a group.
 This application has been built using a Golang backend with Firebase Hosting & Realtime Database alongside Google Cloud
 Platform, a React TypeScript front-end with Ionic for mobile application development.
+
+The complete design of the solution can be seen as hosted on [Figma](https://www.figma.com/file/G71lWR7qZvZgSm7m8tTre4/Decider-v1?node-id=0%3A1&t=RjmxLgjzyk9ZGLXA-1).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -196,7 +198,7 @@ Thank you to the following for their guides and articles on similar projects.
 [license-url]: https://github.com/jamestkelly/decider/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/jimkellyt
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: resources/img/product/product-screenshot-desktop.png
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
 [Golang.go]: https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white

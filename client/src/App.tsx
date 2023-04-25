@@ -1,10 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import NavBarHeader from "./components/NavBar/NavBar";
 
 function App() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <div className="App">
+      <NavBarHeader></NavBarHeader>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>

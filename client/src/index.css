@@ -4,97 +4,97 @@
 
 html,
 body {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
 @media (min-width: 640px) {
-  .mobile-nav {
-    display: none;
-  }
+    .mobile-nav {
+        display: none;
+    }
 
-  .mobile-cv {
-    display: none;
-  }
+    .mobile-cv {
+        display: none;
+    }
 }
 
 .secondary-title {
-  @apply text-3xl font-bold;
+    @apply text-3xl font-bold;
 }
 
 .secondary-title::before {
-  content: "";
-  @apply block w-12 h-2 bg-theme rounded-full mb-1;
+    content: "";
+    @apply block w-12 h-2 bg-theme rounded-full mb-1;
 }
 
 .tertiary-title {
-  @apply text-2xl font-bold;
+    @apply text-2xl font-bold;
 }
 
 .section-paragraph {
-  @apply text-secondary my-6 w-full max-w-3xl;
+    @apply text-secondary my-6 w-full max-w-3xl;
 }
 
 .badge {
-  @apply px-4 py-2 text-sm rounded bg-badge;
+    @apply px-4 py-2 text-sm rounded bg-badge;
 }
 
 [id] {
-  scroll-margin-top: 100px;
+    scroll-margin-top: 100px;
 }
 
 .left-percentage {
-  left: 5%;
+    left: 5%;
 }
 
 .h-screen-partial {
-  height: 80vh;
+    height: 80vh;
 }
 
 .nav-dot {
-  transition: background 200ms, border-color 200ms;
+    transition: background 200ms, border-color 200ms;
 }
 
 .nav-dot:hover span {
-  opacity: 1;
+    opacity: 1;
 }
 
 .modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
 }
 
 .modal-main {
-  position: fixed;
-  background: white;
-  width: 80%;
-  height: auto;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    position: fixed;
+    background: white;
+    width: 80%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .display-block {
-  display: block;
+    display: block;
 }
 
 .display-none {
-  display: none;
+    display: none;
 }

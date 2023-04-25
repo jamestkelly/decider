@@ -1,31 +1,22 @@
 import React, {useState} from 'react';
-import logo from './logo.svg';
 import './App.css';
-import NavBarHeader from "./components/NavBar/NavBar";
+import HomePage from "./pages/HomePage";
+import LandingPage from "./pages/LandingPage";
+
+interface Props {
+  setIsAuthenticated: (value: boolean) => void;
+}
 
 function App() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
   return (
     <div className="App">
-      <NavBarHeader></NavBarHeader>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      { false ? (
+        <LandingPage/>
+      ) : (
+        <HomePage/>
+      )}
     </div>
   );
 }

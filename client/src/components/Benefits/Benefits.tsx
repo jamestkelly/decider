@@ -3,9 +3,9 @@ import Card from "../Card/Card";
 
 const Benefits = () => {
     return (
-        <section className="mt-6 flex flex-col w-full justify-items-center">
+        <section className="my-6 flex flex-col w-full justify-items-center">
             <div className="font-bold text-2xl text-center">Here's how decider can help</div>
-            <div className="mt-4 flex justify-center justify-items-center">
+            <div className="mt-4 flex w-3/4 self-center">
                 <Card title={"Create polls"}
                       body={"Come to a consensus on decisions quickly. Post something and have others vote on the options."}
                       link={"www.google.com"}

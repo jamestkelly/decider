@@ -10,14 +10,14 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - ./server:/app
+      - ./api:/app
     command: npm start
 
   server:
     build:
-      context: ./server
+      context: api
       dockerfile: Dockerfile
     ports:
       - "8080:8080"
     volumes:
-      - ./server:/app
+      - ./api:/app

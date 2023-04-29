@@ -97,24 +97,75 @@ The complete design of the solution can be seen as hosted on [Figma](https://www
 
 ### Prerequisites
 
-TODO:
+Given `Decider` is a React TypeScript application that utilises a Golang API server, it is assumed that the following
+is installed in your development environment.
 
-- Add prerequisite installation information here.
+- `Node.js`: `^v18.0.0`
+- `Go`: `^v1.20.3`
 
 ### Installation
 
-TODO:
+In the event you do not have the base prerequisites installed, please refer to the following links:
 
-- Add installation and local environment setup details here.
+- [Node.js](https://nodejs.org/en)
+- [Go.dev](https://go.dev/)
+- [Docker](https://www.docker.com/)
+  - **Note:** On MacOS devices, I personally recommend using [Orbstack](https://orbstack.dev/) as an alternative to
+    Docker desktop. 
+
+From there, you can follow the steps below to run the application on your local machine.
+
+1. Generate application credentials on [Firebase](https://firebase.google.com/) and note them down. You'll require both
+    the Admin SDK credentials and the standard Firebase credentials.
+2. Copy the template `.env.template` and `firebaseCredentials.template.json` files to the same location (without the
+    `.template` part).
+
+  ```shell
+  # From the root of the repository
+  cd client && cp .env.template .env && cd ../
+  cd api && cp .env.template .env && cp firebaseCredentials.template.json firebaseCredentials.json && cd ../
+  ```
+
+3. Populate the environment files with relevant keys and details.
+4. Navigate to the `client` directory and install the `npm` packages.
+
+  ```shell
+  cd client
+  npm install
+  ```
+
+5. Navigate to the `api` directory and install the `go` packages.
+
+  ```shell
+  cd api
+  go install
+  ```
+
+Once you have finished the steps above, you should be fine to run the application and API locally as per the
+instructions in the [Usage](#usage) section.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
+1. Navigate to the `client` directory and run the client application.
+
+  ```shell
+  cd client
+  npm start
+  ```
+
+2. Navigate to the `api` directory and run the API server.
+
+  ```shell
+  cd api
+  go run main.go
+  ```
+
 TODO:
 
-- Add usage documentation here.
+- Add docker execution steps.
 
 _For more examples, please refer to the [Documentation](https://github.com/jamestkelly/decider)_
 
@@ -124,10 +175,9 @@ _For more examples, please refer to the [Documentation](https://github.com/james
 ## Roadmap
 
 - [x] Project initialisation & creation
-- [ ] Front-end and architectural design
+- [x] Front-end and architectural design
 - [ ] Back-end implementation
   - [ ] Golang API server
-  - [ ] PostgreSQL server
 - [ ] Front-end implementation
   - [ ] Basic website build
   - [ ] Mobile application build
@@ -168,6 +218,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 ## Contact
 
 Jim T Kelly - [jimkelly.t@outlook.com](mailto:jimkelly.t@outlook.com)
+<!-- TODO: Add Cristian & Patrick's contact details here (if they want) -->
 
 Project Link: [https://github.com/jamestkelly/decider](https://github.com/jamestkelly/decider)
 

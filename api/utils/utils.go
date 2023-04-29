@@ -7,7 +7,7 @@ import (
 )
 
 var (
-	base   = "[%s] %s - %\n"
+	base   = "[%s] %s - %s\n"
 	cyan   = color.New(color.FgCyan).SprintFunc()
 	green  = color.New(color.FgGreen).SprintFunc()
 	yellow = color.New(color.FgYellow).SprintFunc()

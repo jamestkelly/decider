@@ -1,3 +1,37 @@
+# Decider | Client Documentation
+
+<a name="readme-top"></a>
+
+<!-- PROJECT SHIELDS -->
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/jamestkelly/decider/client">
+    <img src="../resources/img/decider_logo_background.png" alt="Logo" width="80" height="80">
+  </a>
+
+<h3 align="center">Decider</h3>
+
+  <p align="center">
+    A progressive web application (PWA) for coming to a consensus on decisions, complaints and suggestions sharing, and creating events.
+    <br />
+    <a href="https://github.com/jamestkelly/decider"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/jamestkelly/decider">View Demo</a>
+    ·
+    <a href="https://github.com/jamestkelly/decider/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/jamestkelly/decider/issues">Request Feature</a>
+  </p>
+</div>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -44,3 +78,16 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/jamestkelly/decider.svg?style=for-the-badge
+[contributors-url]: https://github.com/jamestkelly/decider/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/jamestkelly/decider.svg?style=for-the-badge
+[forks-url]: https://github.com/jamestkelly/decider/network/members
+[stars-shield]: https://img.shields.io/github/stars/jamestkelly/decider.svg?style=for-the-badge
+[stars-url]: https://github.com/jamestkelly/decider/stargazers
+[issues-shield]: https://img.shields.io/github/issues/jamestkelly/decider.svg?style=for-the-badge
+[issues-url]: https://github.com/jamestkelly/decider/issues
+[license-shield]: https://img.shields.io/github/license/jamestkelly/decider.svg?style=for-the-badge
+[license-url]: https://github.com/jamestkelly/decider/blob/master/LICENSE.txt

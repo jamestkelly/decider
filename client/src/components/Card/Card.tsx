@@ -11,7 +11,7 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({title, body, link, linkDescription, svgTag}) => {
     return (
         <div
-            className="min-h-full flex flex-col max-w-sm mx-2 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-white dark:border-gray-200">
+            className="min-h-full flex flex-col w-1/4 mx-2 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-white dark:border-gray-200">
             {svgTag}
             <a href={link}>
                 <h5 className="mb-2 text-2xl font-semibold tracking-tight text-black dark:text-black">

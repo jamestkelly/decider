@@ -1,7 +1,5 @@
 import React from 'react';
 import NavBarHeader from "../components/NavBar/NavBar";
-import Hero from "../components/Hero/Hero";
-import Benefits from "../components/Benefits/Benefits";
 import Footer from "../components/Footer/Footer";
 
 function AboutPage() {
@@ -15,7 +13,7 @@ function AboutPage() {
         <Footer/>
       </div>
     </div>
-  )
+  );
 }
 
 export default AboutPage;

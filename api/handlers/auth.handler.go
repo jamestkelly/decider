@@ -5,11 +5,30 @@ import (
 	"decider/api/config"
 	"decider/api/models"
 	"decider/api/utils"
-	"encoding/json"
 	"firebase.google.com/go/auth"
 	"fmt"
 	"net/http"
+	"time"
+
+	"github.com/gin-gonic/gin"
 )
+
+/*
+HealthCheck
+@Summary Performs a basic health-check.
+@Description Health-check API call to verify that the API server is running.
+@Tags Users
+@Success 200 {object} models.HealthCheckResponse
+@Failure 404 {object} object
+@Router /healthCheck [get]
+*/
+func HealthCheck(c *gin.Context) {
+	payload := models.HealthCheckResponse{
+		Date:    time.Now(),
+		Message: "API is live.",
+	}
+	c.IndentedJSON(http.StatusOK, payload)
+}
 
 /*
 RegisterUser
@@ -20,15 +39,14 @@ RegisterUser
 @Failure 404 {object} object
 @Router /register [post]
 */
-func RegisterUser(w http.ResponseWriter, r *http.Request) {
+func RegisterUser(c *gin.Context) {
 	var user models.User
-	err := json.NewDecoder(r.Body).Decode(&user)
-	if err != nil {
+	if err := c.ShouldBindJSON(&user); err != nil {
 		utils.Logger(
 			fmt.Sprintf("Unable to decode user object due to error: %v", err),
 			"ERROR",
 		)
-		http.Error(w, err.Error(), http.StatusBadRequest)
+		c.AbortWithStatusJSON(http.StatusBadRequest, gin.H{"error": err.Error()})
 		return
 	}
 
@@ -41,7 +59,7 @@ func RegisterUser(w http.ResponseWriter, r *http.Request) {
 			fmt.Sprintf("Unable to create user object due to error: %v", err),
 			"ERROR",
 		)
-		http.Error(w, err.Error(), http.StatusInternalServerError)
+		c.AbortWithStatusJSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return
 	}
 
@@ -49,8 +67,7 @@ func RegisterUser(w http.ResponseWriter, r *http.Request) {
 		Message: fmt.Sprintf("User %s registered successfully", u.UID),
 	}
 
-	w.Header().Set("Content-Type", "application/json")
-	json.NewEncoder(w).Encode(response)
+	c.IndentedJSON(http.StatusOK, response)
 }
 
 /*
@@ -63,33 +80,32 @@ to the API.
 @Failure 400,500,401 {object} object
 @Router /validateToken [post]
 */
-func ValidateFirebaseToken(w http.ResponseWriter, r *http.Request) {
+func ValidateFirebaseToken(c *gin.Context) {
 	var user models.User
-	token := r.Header.Get("Authorization")
+	token := c.GetHeader("Authorization")
 	if token == "" {
-		w.WriteHeader(http.StatusUnauthorized)
+		c.AbortWithStatus(http.StatusUnauthorized)
 		utils.Logger(
 			fmt.Sprintf("Unauthorised user call to API: %v", http.StatusUnauthorized),
 			"WARN",
 		)
-
 		return
 	}
 
 	// Verify the ID token
 	idToken, err := config.FirebaseAuthClient.VerifyIDToken(context.Background(), token)
 	if err != nil {
-		w.WriteHeader(http.StatusUnauthorized)
+		c.AbortWithStatus(http.StatusUnauthorized)
 		utils.Logger(
 			fmt.Sprintf("Unauthorised user, unable to decode token due to error: %v", http.StatusUnauthorized),
 			"WARN",
 		)
-
 		return
 	}
 
 	user.ID = idToken.UID
 	user.Email = idToken.Claims["email"].(string) // TODO: Implement logic to do something with validated token
 
-	return
+	// TODO: Return a response to the
+	c.IndentedJSON(http.StatusOK, "yes")
 }

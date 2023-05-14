@@ -4,6 +4,7 @@ import (
 	"context"
 	"decider/api/utils"
 	firebase "firebase.google.com/go"
+	"firebase.google.com/go/db"
 	"firebase.google.com/go/auth"
 	"fmt"
 	"github.com/joho/godotenv"
@@ -12,15 +13,14 @@ import (
 )
 
 var (
-	FirebaseApp        *firebase.App
+	FirebaseClient     *db.Client
 	FirebaseAuthClient *auth.Client
 )
 
 /*
-InitFirebase
-Lorem Ipsum
+InitFirebase initializes the Firebase Admin SDK and sets up the FirebaseAuthClient.
 */
-func InitFirebase() {
+func InitFirebaseApp() *firebase.App {
 	opt := option.WithCredentialsFile("../firebaseCredentials.json")
 	app, err := firebase.NewApp(context.Background(), nil, opt)
 	if err != nil {
@@ -28,23 +28,42 @@ func InitFirebase() {
 			fmt.Sprintf("Error initialising Firebase app: %v", err),
 			"ERROR",
 		)
+		os.Exit(1)
 	}
 
-	auth, err := FirebaseApp.Auth(context.Background())
+	return app
+}
+
+func InitClient(app *firebase.App) (*db.Client, *auth.Client) {
+
+	client, err := app.Database(context.Background())
+	if err != nil {
+		fmt.Printf("Error initializing Firebase Realtime Database client: %v\n", err)
+	}
+
+
+	authClient, err := app.Auth(context.Background())
 	if err != nil {
 		utils.Logger(
 			fmt.Sprintf("Error initialising Firebase Auth: %v", err),
 			"ERROR",
 		)
+		os.Exit(1)
 	}
 
-	FirebaseApp = app
-	FirebaseAuthClient = auth
+	return client, authClient
+
+
+}
+
+func Init() {
+	app := InitFirebaseApp()
+	FirebaseClient, FirebaseAuthClient = InitClient(app)
+
 }
 
 /*
-LoadEnvironment
-Lorem Ipsum
+LoadEnvironment loads configurations from the environment file.
 */
 func LoadEnvironment() {
 	err := godotenv.Load()

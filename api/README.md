@@ -81,13 +81,23 @@ The REST APIs utilised by the Decider application are described below for the ba
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
 [contributors-shield]: https://img.shields.io/github/contributors/jamestkelly/decider.svg?style=for-the-badge
+
 [contributors-url]: https://github.com/jamestkelly/decider/graphs/contributors
+
 [forks-shield]: https://img.shields.io/github/forks/jamestkelly/decider.svg?style=for-the-badge
+
 [forks-url]: https://github.com/jamestkelly/decider/network/members
+
 [stars-shield]: https://img.shields.io/github/stars/jamestkelly/decider.svg?style=for-the-badge
+
 [stars-url]: https://github.com/jamestkelly/decider/stargazers
+
 [issues-shield]: https://img.shields.io/github/issues/jamestkelly/decider.svg?style=for-the-badge
+
 [issues-url]: https://github.com/jamestkelly/decider/issues
+
 [license-shield]: https://img.shields.io/github/license/jamestkelly/decider.svg?style=for-the-badge
+
 [license-url]: https://github.com/jamestkelly/decider/blob/master/LICENSE.txt

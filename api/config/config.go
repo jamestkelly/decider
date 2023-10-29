@@ -4,8 +4,8 @@ import (
 	"context"
 	"decider/api/utils"
 	firebase "firebase.google.com/go"
-	"firebase.google.com/go/db"
 	"firebase.google.com/go/auth"
+	"firebase.google.com/go/db"
 	"fmt"
 	"github.com/joho/godotenv"
 	"google.golang.org/api/option"
@@ -41,7 +41,6 @@ func InitClient(app *firebase.App) (*db.Client, *auth.Client) {
 		fmt.Printf("Error initializing Firebase Realtime Database client: %v\n", err)
 	}
 
-
 	authClient, err := app.Auth(context.Background())
 	if err != nil {
 		utils.Logger(
@@ -52,7 +51,6 @@ func InitClient(app *firebase.App) (*db.Client, *auth.Client) {
 	}
 
 	return client, authClient
-
 
 }
 

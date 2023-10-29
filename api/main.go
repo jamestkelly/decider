@@ -9,13 +9,13 @@ import (
 func main() {
 	config.Init()
 	router := gin.Default()
-	apiGroup := router.Group("/api") 
+	apiGroup := router.Group("/api")
 	{
 
 		router.GET("/healthCheck", handlers.HealthCheck)
 		router.POST("/register", handlers.RegisterUser)
 		router.POST("/validateToken", handlers.ValidateFirebaseToken)
-		
+
 		apiGroup.GET("/group/:groupId/item/:id", handlers.GetItem)
 		apiGroup.DELETE("/group/:groupId/item/:id", handlers.DeleteItem)
 		apiGroup.POST("/group/:groupId/item/:id", handlers.CreateItem)

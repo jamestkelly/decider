@@ -1,12 +1,12 @@
 package models
 
 type Server struct {
-	NumUsers   int        `json:"num_users"`
-	Name       string     `json:"name"`
-	Channels   []Channel  `json:"channels"`
-	Owner      string     `json:"-"`
-	AdminIDs   []string   `json:"-"`
-	UserIDs    []string   `json:"-"`
+	NumUsers int       `json:"num_users"`
+	Name     string    `json:"name"`
+	Channels []Channel `json:"channels"`
+	Owner    string    `json:"-"`
+	AdminIDs []string  `json:"-"`
+	UserIDs  []string  `json:"-"`
 }
 
 func (s *Server) addUser(userID string) {

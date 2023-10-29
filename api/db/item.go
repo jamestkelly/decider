@@ -1,9 +1,9 @@
 package db
 
 import (
-	"decider/api/models"
-	"decider/api/config"
 	"context"
+	"decider/api/config"
+	"decider/api/models"
 )
 
 func GetItemFromDataStore(groupID, itemID string) (models.Item, error) {

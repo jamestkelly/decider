@@ -6,7 +6,7 @@ Interface to represent basic user authentication objects.
 */
 type User struct {
 	ID        string   `json:"id"`
-	Name 	  string   `json:"name"`
+	Name      string   `json:"name"`
 	Email     string   `json:"email"`
 	AvatarURL string   `json:"avatarURL"`
 	Password  string   `json:"-"`

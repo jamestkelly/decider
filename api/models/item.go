@@ -7,14 +7,14 @@ Item
 Interface to represent Items.
 */
 type Item struct {
-	ID        string    `json:"id"`
-	Type 	  string    `json:"type"`
-	User      User      `json:"user"`
-	Title     string    `json:"title"`
-	Body      string    `json:"body"`
-	Media     []string  `json:"media"`
-	Comments  []Comment `json:"comments"`
-	Votes     []Vote 	`json:"votes"`
+	ID       string    `json:"id"`
+	Type     string    `json:"type"`
+	User     User      `json:"user"`
+	Title    string    `json:"title"`
+	Body     string    `json:"body"`
+	Media    []string  `json:"media"`
+	Comments []Comment `json:"comments"`
+	Votes    []Vote    `json:"votes"`
 }
 
 func (i *Item) addVote(vote Vote) {
@@ -71,7 +71,7 @@ Interface to represent Comments of Items.
 */
 type Comment struct {
 	ID        string    `json:"id"`
-	UserID 	  string    `json:"userID"`
+	UserID    string    `json:"userID"`
 	Timestamp time.Time `json:"timestamp"`
 	Votes     []Vote    `json:"Votes"`
 }
@@ -81,7 +81,7 @@ Vote
 Interface to represent Votes of Comments or Items.
 */
 type Vote struct {
-	ID        string      `json:"id"`
-	Vote 	  bool        `json:"vote"`
-	Timestamp time.Time   `json:"timestamp"`
+	ID        string    `json:"id"`
+	Vote      bool      `json:"vote"`
+	Timestamp time.Time `json:"timestamp"`
 }

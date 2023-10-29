@@ -9,7 +9,6 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-
 func GetItem(c *gin.Context) {
 	groupID := c.Param("groupId")
 	itemID := c.Param("id")
